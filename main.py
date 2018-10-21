@@ -1,3 +1,31 @@
+import webapp2
+import jinja2
+import os
+from models import Movie
+from google.appengine.ext import ndb
+from google.appengine.api import urlfetch
+import json
+import urllib
+
+
+
+the_jinja_environment = jinja2.Environment(
+    loader = jinja2.FileSystemLoader(os.path.dirname(__file__)),
+    extensions = [],
+    autoescape = True)
+
+class WelcomePage(webapp2.RequestHandler):
+    def get(self):
+        welcome_template = the_jinja_environment.get_template('templates/homepage.html')
+        self.response.write(welcome_template.render())
+        print("welcomeget")
+
+    def post(self):
+        print("WelcomePost")
+        result_template = the_jinja_environment.get_template('templates/result.html')
+        self.response.write(welcome_template.render())
+
+
 if(isset($_FILES['image'])){//Checks if file is set
   $errors= array();
   $file_name = $_FILES['image']['name'];
@@ -17,11 +45,8 @@ if(isset($_FILES['image'])){//Checks if file is set
      $errors[]='File size must be excately 2 MB';
   }
 
-  //If there's no error moves files to folder "images" in the root of this file, else prints all the errors
-  if(empty($errors)==true){
-     move_uploaded_file($file_tmp,"images/".$file_name);
-     echo "Success";
-  }else{
-     print_r($errors);
-  }
-}
+ app = webapp2.WSGIApplication([
+     ('/', WelcomePage),
+     ('/result', ResultPage),
+     ('/about', AboutPage),
+ ], debug=True)

@@ -1,8 +1,17 @@
 
-#myVideo {
+#marvelpic {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+}
+
+div {
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
 }
