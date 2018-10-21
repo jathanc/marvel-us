@@ -1,5 +1,6 @@
 div {
   display: flex;
+  flex-direction: column;
 }
 input {
   margin: auto;
@@ -16,6 +17,8 @@ input {
 }
 button {
   color: red;
+  width: 50px;
+  margin: auto;
 }
 
 body, html {
