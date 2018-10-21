@@ -9,12 +9,12 @@ input {
   padding: 30px;
 }
 
-#photo {
+/* #photo {
   margin: auto;
   width: 50%;
   border: 3px solid green;
   padding: 30px;
-}
+} */
 button {
   color: red;
   width: 50px;
