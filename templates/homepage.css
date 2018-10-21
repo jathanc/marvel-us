@@ -1,21 +1,27 @@
 
-div {
-    color: white;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -200px;
-}
+
 input {
   display: flex;
   justify-content: center;
   color: red;
+  text-align: center;
+  border: 3px solid green;
 }
 
 #photo {
   margin: auto;
   width: 50%;
   border: 3px solid green;
-  padding: 10px;
+  padding: 30px;
+
+
+
+  /* margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px; */
+}
+
+body, html {
+    height: 100%;
 }
