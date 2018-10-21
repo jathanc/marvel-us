@@ -7,3 +7,15 @@ div {
     margin-top: -100px;
     margin-left: -200px;
 }
+input {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+
+#photo {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
