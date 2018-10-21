@@ -45,6 +45,17 @@ if(isset($_FILES['image'])){//Checks if file is set
      $errors[]='File size must be excately 2 MB';
   }
 
+class ResultPage(webapp2.RequestHandler):
+    def get(self):
+        welcome_template = the_jinja_environment.get_template('templates/result.html')
+        self.response.write(welcome_template.render())
+        print("resultget")
+
+    def post(self):
+        print("resultPost")
+        result_template = the_jinja_environment.get_template('templates/result.html')
+        self.response.write(welcome_template.render())
+
  app = webapp2.WSGIApplication([
      ('/', WelcomePage),
      ('/result', ResultPage),
